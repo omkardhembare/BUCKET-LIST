@@ -1,0 +1,116 @@
+body {
+  font-family: cursive, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  background-color: #f79b72;
+  margin: 20px;
+  color: #2a4759;
+}
+
+h1 {
+  text-align: center;
+  color: #2a4759;
+  margin-bottom: 30px;
+}
+
+.bucket-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(42, 71, 89, 0.1);
+}
+
+.bucket-list li {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dddddd;
+  display: block;
+  align-items: center;
+}
+
+.bucket-list li label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bucket-list li input[type="checkbox"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bucket-list li input[type="checkbox"]:checked + span {
+  color: #eeeeee;
+  background-color: #2a4759;
+  text-decoration: line-through;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.bucket-list li:last-child {
+  border-bottom: none;
+}
+
+.bucket-list li::before {
+  content: none;
+}
+
+.bucket-list li label span::before {
+  content: "⭐";
+  margin-right: 10px;
+  font-size: 1.3rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: #2a4759;
+}
+
+.bucket-list li input[type="checkbox"]:checked + span::before {
+  content: "✔";
+  color: #eeeeee;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+
+  .bucket-list {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .bucket-list li {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .bucket-list li::before {
+    width: 25px;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+}
+
+/* Additional responsiveness for very small screens */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .bucket-list li {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .bucket-list li::before {
+    width: 20px;
+    font-size: 1rem;
+    margin-right: 8px;
+  }
+}
